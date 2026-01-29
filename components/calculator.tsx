@@ -12,7 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import BuildKHQR from "@/utils/BuildKHQRService";
+
 import buildKHQR from "@/utils/BuildKHQRService";
 
 export default function Calculator() {
