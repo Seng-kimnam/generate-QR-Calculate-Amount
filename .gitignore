@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-/utils/BuildKHQRService.ts
+# /utils/BuildKHQRService.ts
 
 # next.js
 /.next/
