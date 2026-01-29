@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import BuildKHQR from "@/utils/BuildKHQRService";
 
 export default function Calculator() {
   const [display, setDisplay] = useState("0");
@@ -114,7 +115,8 @@ export default function Calculator() {
     ["0", ".", "=", "+"],
   ];
 
-  return (
+  const buildKHQR = BuildKHQR(display)
+  return (  
     <div className="flex flex-col  items-center justify-center min-h-screen bg-linear-to-br from-background to-muted p-3 sm:p-4 gap-4 sm:gap-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 w-full  max-w-4xl">
         {/* Calculator Section */}
@@ -199,7 +201,7 @@ export default function Calculator() {
                 </DialogTitle>
                 <DialogDescription>
                   <QRGenerator
-                    qrValue={qrValue}
+                    qrValue={buildKHQR}
                     handleCopyToClipboard={handleCopyToClipboard}
                   />
                 </DialogDescription>
